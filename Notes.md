@@ -3,7 +3,7 @@
 - every table needs a primary key
   - unique idenitfier for that particular table
 
-## knex
+## Knex
 
 - initialize database with knex
   - knex init
@@ -22,3 +22,14 @@
       - records how to undo the changes that occurs in the exports.up
   - run pending migrations
     - knex migrate:latest
+
+## Mantras
+
+    - every table must have a primary key
+    - every change to the database schema (structure, NOT the data) must be done with a new migration
+
+## Migrations
+
+    - create migration --> knex migrate:make name
+    - run pending migrations --> knex migrate:latest
+    - run the down() function to undo changes --> knex migrate:rollback
